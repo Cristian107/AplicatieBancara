@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" stylesheets="@../../../styles/styleMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplicatiebancara1.MenuController">
+   <children>
+      <Text id="balanta" fx:id="balanta" layoutX="174.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bani multi frate" textAlignment="CENTER" wrappingWidth="153.134765625" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="174.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="menu" layoutX="340.0" layoutY="-5.0" mnemonicParsing="false" onAction="#toggleVBox" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Menu" textFill="WHITE" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-5.0" />
+      <Line endX="486.0" layoutX="14.0" layoutY="298.0" startX="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text fx:id="text1" layoutX="19.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="text2" layoutX="19.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="text3" layoutX="19.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="text4" layoutX="19.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Button id="butonDepunere" fx:id="butonDepune" layoutX="192.0" layoutY="171.0" mnemonicParsing="false" onAction="#onDepunereClick" prefHeight="57.0" prefWidth="118.0" text="Depunere" textAlignment="CENTER" />
+      <Button id="butonRetragere" fx:id="butonRetrage" layoutX="362.0" layoutY="171.0" mnemonicParsing="false" onAction="#onRetragereClick" prefHeight="57.0" prefWidth="118.0" text="Retragere" textAlignment="CENTER" />
+      <Button id="hello" fx:id="hello" alignment="CENTER" ellipsisString="" layoutX="-5.0" layoutY="-6.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="346.0" style="-fx-background-color: #000066;" styleClass="button_style" text="                                             Buna, barosane!" textFill="WHITE" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="-6.0" />
+      <Button id="butonTrimite" fx:id="butonTrimite" layoutX="41.0" layoutY="171.0" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="57.0" prefWidth="118.0" text="Trimite" textAlignment="CENTER" />
+      <Button fx:id="logOut" alignment="CENTER" layoutX="340.0" layoutY="424.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="76.0" prefWidth="160.0" style="-fx-background-color: #FF0000;" styleClass="button_style" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="196.0" layoutY="65.0" prefHeight="36.0" prefWidth="108.0" text="Suma curentă:" textAlignment="CENTER" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="196.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <VBox id="vBox" fx:id="vBox" layoutX="341.0" layoutY="46.0" prefHeight="379.0" prefWidth="160.0" style="-fx-background-color: #000066;">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onDepunereClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Depunere" textFill="WHITE" VBox.vgrow="ALWAYS" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onTrimiteClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Trimite" textFill="WHITE" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onRetragereClick" prefHeight="43.0" prefWidth="160.0" style="-fx-background-color: #000066;" styleClass="button_style" text="Retragere" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Pane fx:id="interfata1" layoutY="207.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="324.0" prefWidth="501.0" style="-fx-background-color: #404040;">
+         <children>
+            <Button fx:id="trimitereCLose1" layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#onRetragereCLose" text="Close" textFill="RED" />
+            <TextField fx:id="amountRetragere" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="68.0" promptText="Ammount" />
+            <Button layoutX="191.0" layoutY="205.0" mnemonicParsing="false" onAction="#onConfirmRetragere" prefHeight="44.0" prefWidth="118.0" text="Confirm">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="pinRetragere" alignment="CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="129.0" promptText="PIN" />
+         </children>
+      </Pane>
+      <Pane fx:id="interfata2" layoutY="207.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="324.0" prefWidth="501.0" style="-fx-background-color: #404040;">
+         <children>
+            <Button fx:id="trimitereCLose2" layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#onDepunereCLose" text="Close" textFill="RED" />
+            <TextField fx:id="amountDepunere" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="68.0" promptText="Ammount" />
+            <Button layoutX="191.0" layoutY="205.0" mnemonicParsing="false" onAction="#onConfirmDepunere" prefHeight="44.0" prefWidth="118.0" text="Confirm">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="pinDepunere" alignment="CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="129.0" promptText="PIN" />
+         </children>
+      </Pane>
+      <Pane fx:id="interfata" layoutY="200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="333.0" prefWidth="501.0" style="-fx-background-color: #404040;">
+         <children>
+            <Button fx:id="trimitereCLose" layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#onTrimiteCLose" text="Close" textFill="RED" />
+            <TextField fx:id="amountTrimite" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="68.0" promptText="Ammount" />
+            <Button layoutX="200.0" layoutY="205.0" mnemonicParsing="false" onAction="#onConfirmTrimite" prefHeight="23.0" prefWidth="102.0" text="Confirm">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="toUserTrimite" alignment="CENTER" blendMode="SCREEN" layoutX="176.0" layoutY="129.0" promptText="To user" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
